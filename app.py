@@ -20,7 +20,7 @@ if uploaded_file is not None:
     st.image(img, caption="Uploaded Image", use_column_width=True)
 
     # Preprocess image
-    img_resized = img.resize((224, 224))
+    img_resized = img.resize((256, 256))
     img_array = image.img_to_array(img_resized) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
 
